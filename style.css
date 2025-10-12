@@ -192,6 +192,58 @@
             box-shadow: 0 6px 15px rgba(106, 17, 203, 0.4);
         }
 
+.about-section, .tech-section, .highlight, .contact-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-section h2,
+.tech-section h2,
+.highlight h2,
+.contact-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.tech-list {
+    list-style: none;
+    text-align: center;
+    color: #555;
+}
+
+.tech-list li {
+    display: inline-block;
+    background: #f0f4ff;
+    margin: 8px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.contact-section a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.card, .about-section, .tech-section, .highlight, .contact-section {
+    animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
         footer {
             text-align: center;
             margin-top: 60px;
