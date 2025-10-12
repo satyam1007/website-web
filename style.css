@@ -240,14 +240,16 @@
 
         /* Section Styles */
         .about-section, .tech-section, .highlight, .contact-section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin: 50px 0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            position: relative;
-            overflow: hidden;
-        }
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 50px auto; /* Changed from 50px 0 to auto for horizontal centering */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px; /* Added max-width to control width on large screens */
+    width: 90%; /* Added width to ensure proper sizing */
+}
 
         .about-section::before, .tech-section::before, .highlight::before, .contact-section::before {
             content: "";
