@@ -292,10 +292,15 @@
         }
 
         .member a {
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    word-wrap: break-word;       /* breaks long emails */
+    overflow-wrap: anywhere;     /* modern version */
+    text-align: center;          /* keep alignment */
+}
+
 
         .member a:hover {
             text-decoration: underline;
