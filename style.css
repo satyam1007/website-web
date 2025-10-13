@@ -296,9 +296,9 @@
     text-decoration: none;
     font-size: 0.9rem;
     display: block;
-    word-wrap: break-word;       /* breaks long emails */
-    overflow-wrap: anywhere;     /* modern version */
-    text-align: center;          /* keep alignment */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
 }
 
 
