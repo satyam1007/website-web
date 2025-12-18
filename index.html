@@ -4,127 +4,361 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Web Apps Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .attendance-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .expense-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .task-icon {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        .member-img {
+            transition: all 0.3s ease;
+        }
+        .member-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Our Web Applications</h1>
-            <p class="subtitle">Three innovative web apps built with passion and expertise</p>
-        </div>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Web Apps Portfolio</h1>
+                    <p class="text-gray-200 mt-1 text-sm md:text-base">Three innovative web apps built with passion and expertise</p>
+                </div>
+                <div class="flex space-x-2">
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs md:text-sm">HTML5</span>
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs md:text-sm">CSS3</span>
+                    <span class="px-3 py-1 bg-white/20 rounded-full text-xs md:text-sm">JavaScript</span>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <div class="container">
-        <section class="about-section">
-            <h2>About This Project</h2>
-            <p>
-                This portfolio features three interactive web applications designed to simplify everyday tasks. 
-                The Attendance Tracker helps record and manage student attendance efficiently, 
-                the Expense Tracker allows users to track daily spending and manage budgets, 
-                and the Task Manager makes it easier to organize and complete daily to-dos.
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-12 md:py-16">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Simplifying Everyday Tasks</h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                This portfolio features three interactive web applications designed to help you track attendance, 
+                manage expenses, and organize tasks efficiently. All built with vanilla JavaScript and responsive design.
             </p>
-        </section>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#apps" class="px-8 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition duration-300 shadow-lg">
+                    Explore Apps <i class="ml-2 fas fa-arrow-down"></i>
+                </a>
+                <a href="#team" class="px-8 py-3 bg-white text-purple-600 border border-purple-600 font-medium rounded-lg hover:bg-purple-50 transition duration-300">
+                    Meet The Team <i class="ml-2 fas fa-users"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <section class="apps-container">
+    <!-- Apps Section -->
+    <section id="apps" class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Web Applications</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Each app is designed with a specific purpose in mind, built to be intuitive, responsive, and user-friendly.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <!-- Card 1: Attendance Tracker -->
-            <div class="card">
-                <div class="card-image attendance-icon">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="attendance-icon h-48 flex items-center justify-center">
+                    <div class="text-white text-center p-4">
+                        <i class="fas fa-user-check text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Attendance Tracker</h3>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h2 class="card-title">Attendance Tracker — Smart Attendance Web App</h2>
-                    <p class="card-description">
-                      A modern attendance web appbuilt using HTML, CSS, and JavaScript for easy attendance tracking.
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-3">Smart Attendance Web App</h4>
+                    <p class="text-gray-600 mb-6">
+                        A modern attendance web app built using HTML, CSS, and JavaScript for easy attendance tracking.
                     </p>
-                    <a href="https://satyam1007.github.io/attandance-web-app/" class="card-button" target="_blank">Launch App</a>
+                    <div class="flex justify-between items-center">
+                        <a href="https://satyam1007.github.io/attandance-web-app/" target="_blank" class="px-5 py-2 bg-purple-100 text-purple-700 font-medium rounded-lg hover:bg-purple-200 transition duration-300">
+                            Launch App <i class="ml-1 fas fa-external-link-alt"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">HTML</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">CSS</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">JS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Card 2: Expense Tracker -->
-            <div class="card">
-                <div class="card-image expense-icon">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="expense-icon h-48 flex items-center justify-center">
+                    <div class="text-white text-center p-4">
+                        <i class="fas fa-chart-pie text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Expense Tracker</h3>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h2 class="card-title">Expense Tracker</h2>
-                    <p class="card-description">
-                      Simple mobile-responsive expense tracker. Add, edit and remove expenses with a clean UI.
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-3">Budget Management App</h4>
+                    <p class="text-gray-600 mb-6">
+                        Simple mobile-responsive expense tracker. Add, edit and remove expenses with a clean UI.
                     </p>
-                    <a href="https://satyam1007.github.io/expanse-tracker/" class="card-button" target="_blank">Launch App</a>
+                    <div class="flex justify-between items-center">
+                        <a href="https://satyam1007.github.io/expanse-tracker/" target="_blank" class="px-5 py-2 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200 transition duration-300">
+                            Launch App <i class="ml-1 fas fa-external-link-alt"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">HTML</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">CSS</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">JS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Card 3: Todo App -->
-            <div class="card">
-                <div class="card-image task-icon">
-                    <div class="checkmark"></div>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div class="task-icon h-48 flex items-center justify-center">
+                    <div class="text-white text-center p-4">
+                        <i class="fas fa-tasks text-5xl mb-4"></i>
+                        <h3 class="text-2xl font-bold">Task Manager</h3>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h2 class="card-title">Task Manager</h2>
-                    <p class="card-description">
-                      A simple and intuitive Todo app built using HTML, CSS, and JavaScript to help you organize and manage your tasks efficiently.
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-3">Productivity & Organization</h4>
+                    <p class="text-gray-600 mb-6">
+                        A simple and intuitive Todo app to help you organize and manage your tasks efficiently.
                     </p>
-                    <a href="https://satyam1007.github.io/todo-web-app/" class="card-button" target="_blank">Launch App</a>
+                    <div class="flex justify-between items-center">
+                        <a href="https://satyam1007.github.io/todo-web-app/" target="_blank" class="px-5 py-2 bg-green-100 text-green-700 font-medium rounded-lg hover:bg-green-200 transition duration-300">
+                            Launch App <i class="ml-1 fas fa-external-link-alt"></i>
+                        </a>
+                        <div class="flex space-x-2">
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">HTML</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">CSS</span>
+                            <span class="text-xs px-2 py-1 bg-gray-100 rounded">JS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="tech-section">
-            <h2>Technologies Used</h2>
-            <ul class="tech-list">
-                <li>HTML5, CSS3, JavaScript (Vanilla)</li>
-                <li>Responsive Design Principles</li>
-                <li>Version Control using Git & GitHub</li>
-            </ul>
-        </section>
-
-        <section class="highlight">
-            <h2>Project Highlights</h2>
-            <p>All apps are mobile-friendly and deployed online.</p>
-            <p>Focused on improving user experience and interactivity.</p>
-            <p>Designed with modern UI trends and color gradients.</p>
-        </section>
-
-        <section class="contact-section">
-            <h2>About the Team</h2>
-<p>
-    This project was created by a team of three friends — <strong>Satyam Mishra</strong>, <strong>Ayushmaan Khajuria</strong>, and <strong>Raghav Sharma</strong>. 
-    We are students of <strong>Class 11th, Non-Medical</strong> at <strong>Govt. Model Sanskriti Senior Secondary School</strong>, and we worked together to plan, design, and build this project, combining ideas, creativity, and effort at every step.
-</p>
-<p>
-    While Satyam handled the development part, Ayushmaan and Raghav contributed with valuable ideas, feedback, and constant support that helped shape the final result. 
-    This project reflects not only our teamwork and shared enthusiasm for learning, but also the spirit of collaboration and curiosity that we carry from our school.
-</p>
-
-            
-            <div class="team-members">
-                <div class="member">
-                    <img src="/images/mee.png" alt="Satyam Mishra">
-                    <strong>Satyam Mishra</strong>
-                    <span>Developer</span>
-                    <a href="mailto:satyammishradeveloper@gmail.com">satyammishradeveloper@gmail.com</a>
+    <!-- Technologies & Highlights -->
+    <section class="bg-gradient-to-r from-gray-50 to-gray-100 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Technologies Section -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Technologies Used</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">HTML5, CSS3, JavaScript</h4>
+                                <p class="text-gray-600">Built with vanilla JavaScript for optimal performance</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-mobile-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Responsive Design</h4>
+                                <p class="text-gray-600">Mobile-first approach for all screen sizes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-git-alt text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Git & GitHub</h4>
+                                <p class="text-gray-600">Version control and collaborative development</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="member">
-                    <img src="/images/ayushmaan_2.jpeg" alt="Ayushmaan Khajuria">
-                    <strong>Ayushmaan Khajuria</strong>
-                    <span>Ideas & Design</span>
-                    <a href="mailto:ayushmaankhajuria@gmail.com">ayushmaankhajuria@gmail.com</a>
-                </div>
-
-                <div class="member">
-                    <img src="/images/raghav.jpg" alt="Raghav Sharma">
-                    <strong>Raghav Sharma</strong>
-                    <span>Support & Feedback</span>
-                    <a href="mailto:raghavvashisht01102008@gmail.com">raghavvashisht01102008@gmail.com</a>
+                <!-- Highlights Section -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Project Highlights</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Mobile-Friendly Design</h4>
+                                <p class="text-gray-600">All apps are responsive and work seamlessly on all devices</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">User Experience Focus</h4>
+                                <p class="text-gray-600">Designed with intuitive interfaces and smooth interactions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Modern UI Design</h4>
+                                <p class="text-gray-600">Clean aesthetics with contemporary color gradients</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Live Deployment</h4>
+                                <p class="text-gray-600">All apps are deployed and accessible online</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Our Web Apps Portfolio. All rights reserved.</p>
+        <!-- Team Section -->
+    <section id="team" class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                We are three Class 11th Non-Medical students from Govt. Model Sanskriti Senior Secondary School, 
+                combining our skills and passion to create meaningful web applications.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Satyam Mishra -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center p-8 card-hover">
+                <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-purple-100 member-img">
+                    <!-- Original image from your code -->
+                    <img src="/images/mee.png" alt="Satyam Mishra" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Satyam Mishra</h3>
+                <p class="text-purple-600 font-medium mb-4">Developer</p>
+                <p class="text-gray-600 mb-6">Handled the development and implementation of all three web applications.</p>
+                <div class="mb-6">
+                    <a href="mailto:satyammishradeveloper@gmail.com" class="text-gray-700 hover:text-purple-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> satyammishradeveloper@gmail.com
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">HTML/CSS</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">JavaScript</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Git</span>
+                </div>
+            </div>
+
+            <!-- Ayushmaan Khajuria -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center p-8 card-hover">
+                <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-blue-100 member-img">
+                    <!-- Original image from your code -->
+                    <img src="/images/ayushmaan_2.jpeg" alt="Ayushmaan Khajuria" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Ayushmaan Khajuria</h3>
+                <p class="text-blue-600 font-medium mb-4">Ideas & Design</p>
+                <p class="text-gray-600 mb-6">Contributed with valuable ideas, feedback, and design suggestions.</p>
+                <div class="mb-6">
+                    <a href="mailto:ayushmaankhajuria@gmail.com" class="text-gray-700 hover:text-blue-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> ayushmaankhajuria@gmail.com
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">UI/UX</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Planning</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Design</span>
+                </div>
+            </div>
+
+            <!-- Raghav Sharma -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden text-center p-8 card-hover">
+                <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-green-100 member-img">
+                    <!-- Original image from your code -->
+                    <img src="/images/raghav.jpg" alt="Raghav Sharma" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Raghav Sharma</h3>
+                <p class="text-green-600 font-medium mb-4">Support & Feedback</p>
+                <p class="text-gray-600 mb-6">Provided constant support, testing, and feedback throughout the project.</p>
+                <div class="mb-6">
+                    <a href="mailto:raghavvashisht01102008@gmail.com" class="text-gray-700 hover:text-green-600 transition duration-300">
+                        <i class="fas fa-envelope mr-2"></i> raghavvashisht01102008@gmail.com
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Testing</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Feedback</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Support</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Our Collaboration</h3>
+            <p class="text-gray-700 mb-6">
+                This project reflects our teamwork and shared enthusiasm for learning. While Satyam handled the development, 
+                Ayushmaan and Raghav contributed with ideas, feedback, and support that helped shape the final result.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium">Class 11th Non-Medical</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium">Govt. Model Sanskriti School</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-sm font-medium">Team Collaboration</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold">Web Apps Portfolio</h3>
+                    <p class="text-gray-200 mt-2">Three innovative apps built with passion and expertise</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#apps" class="text-gray-200 hover:text-white transition duration-300">Apps</a>
+                    <a href="#team" class="text-gray-200 hover:text-white transition duration-300">Team</a>
+                    <a href="mailto:satyammishradeveloper@gmail.com" class="text-gray-200 hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-gray-200">
+                <p>&copy; 2025 Our Web Apps Portfolio. All rights reserved. | Class 11th Non-Medical Project</p>
+            </div>
         </div>
     </footer>
 </body>
